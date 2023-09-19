@@ -9,7 +9,7 @@ public static void main(String[] args)
 
     // TenaryOperator: Goal is to show execution and output
 
-    // Integer = double.Bytes
-    // firstOperand > secondOperand ? firstOperand : secondOperand;
+    // resultOfTernaryOperation = Integer.MIN_VALUE (anything)
+    // (TF statement) firstOperand > secondOperand ? (only if true) firstOperand : (else) secondOperand;
 
 }
