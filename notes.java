@@ -1,5 +1,5 @@
 
-public class main
+public class notes
 {
 
 public static void main(String[] args)
@@ -22,6 +22,15 @@ public static void main(String[] args)
     }
 
     // Without break it'll keep running down the case statements (switch case and input must be same data type)
+
+    // You can call a loop and break it using this
+    outerLoopLabel: 
+    for (int i =0; i < 5; i++) {
+        if (i == 2) {
+            break outerLoopLabel;
+        }
+        System.out.println('h');
+    }
 }
 
 }
