@@ -6,22 +6,26 @@ package DogLab;
 
 import java.util.Arrays;
 
-public class Doggies {
+public class Doggies 
+{
     private Dog[] pups; // An array to hold Dog objects
 
-    public Doggies(int size) {
+    public Doggies(int size) 
+    {
         // Constructor: Initialize the Doggies with the specified size
         pups = new Dog[size]; // Initialize pups array with the given size
     }
 
-    public void set(int spot, int age, String name) {
+    public void set(int spot, int age, String name) 
+    {
         // Set a new Dog in the array at the specified spot (make sure spot is in bounds)
         if (spot >= 0 && spot < pups.length) {
             pups[spot] = new Dog(age, name);
         }
     }
 
-    public String getNameOfOldest() {
+    public String getNameOfOldest() 
+    {
         if (pups.length == 0) {
             return "No dogs in the pack.";
         }
