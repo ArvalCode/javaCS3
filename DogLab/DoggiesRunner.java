@@ -15,7 +15,7 @@ public class DoggiesRunner {
         // Create a pack of dogs with the specified size
         Doggies pack = new Doggies(size);
 
-        for (int i = 0; i < size; i++) {
+         for (int i = 0; i < size; i++) {
             System.out.print("Enter the age :: ");
             int age = keyboard.nextInt();
             System.out.print("Enter the name :: ");

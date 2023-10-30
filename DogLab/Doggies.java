@@ -36,8 +36,8 @@ public class Doggies
         // Find the oldest dog in the pack
         for (int i = 1; i < pups.length; i++) {
             if (pups[i].getAge() > maxAge) {
-                maxAge = pups[i].getAge();
-                oldestName = pups[i].getName();
+                maxAge = pups[i].getAge(); // Update the maximum age
+                oldestName = pups[i].getName(); // Update the name of the oldest dog
             }
         }
 
@@ -55,8 +55,8 @@ public class Doggies
         // Find the youngest dog in the pack
         for (int i = 1; i < pups.length; i++) {
             if (pups[i].getAge() < minAge) {
-                minAge = pups[i].getAge();
-                youngestName = pups[i].getName();
+                minAge = pups[i].getAge(); // Update the minimum age
+                youngestName = pups[i].getName(); // Update the name of the youngest dog
             }
         }
 
