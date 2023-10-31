@@ -13,10 +13,10 @@ public class RecursionFunFour
             return 0;
             int lastDigit = num % 10;
 
-	        int evenCount = lastDigit % 2 != 0 ? lastDigit : 0;
+	        int evenCount = lastDigit % 2 != 0 ? lastDigit : 0; // Sets even count to if the lastDigit is not equal to 0, it sets the value to lastDigit
 
 	        int newNum = num / 10;
 
-	        return evenCount + sumOddDigits(newNum);
+	        return evenCount + sumOddDigits(newNum); // Returns
         }
 }

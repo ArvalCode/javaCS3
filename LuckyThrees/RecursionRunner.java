@@ -1,37 +1,32 @@
-package LuckyThrees;
 
-public class RecursionRunner {
-    public static int luckyThrees(long number) {
-        return luckyThreesHelper(number, false);
-    }
+//Name: Nolan Tran
 
-    public static int luckyThreesHelper(long number, boolean firstDigitThree) {
-        if (number == 0) {
+public class RecursionRunner
+{
+    public static int luckyThrees(int number)
+    {
+        int NumberThree = 0;
+        // converts to string
+        String NumThrees = Integer.toString(number);
+        // if it ends it return 0
+        if (NumThrees.length() == 1) {
             return 0;
-        } else if (number % 10 == 3 && !firstDigitThree) {
-            return luckyThreesHelper(number / 10, true);
-        } else if (number % 10 == 3) {
-            return 1 + luckyThreesHelper(number / 10, firstDigitThree);
-        } else {
-            return luckyThreesHelper(number / 10, firstDigitThree);
         }
+        // add one to the counter if it isn't compared to the first digit of the number and the digit is 3, add one to the counter
+        if (NumThrees.length() != 1 && NumThrees.charAt(NumThrees.length()-1) =='3') {
+            NumberThree+=1;
+        }
+        // return the counter with 1 less digit
+    return NumberThree + luckyThrees(number/10);
     }
-
-    public static void main(String[] args) {
-      long testNumber1 = 33312345;
-      int result1 = luckyThrees(testNumber1);
-      System.out.println("Number of threes in " + testNumber1 + " is " + result1);
-
-      long testNumber2 = 123456789;
-      int result2 = luckyThrees(testNumber2);
-      System.out.println("Number of threes in " + testNumber2 + " is " + result2);
-
-      long testNumber3 = 33333;
-      int result3 = luckyThrees(testNumber3);
-      System.out.println("Number of threes in " + testNumber3 + " is " + result3);
-
-      long testNumber4 = 7777777;
-      int result4 = luckyThrees(testNumber4);
-      System.out.println("Number of threes in " + testNumber4 + " is " + result4);
+    public static void main(String[] args)
+    {
+    // test cases
+        System.out.println(luckyThrees(3));
+        System.out.println(luckyThrees(30));
+        System.out.println(luckyThrees(134523));
+        System.out.println(luckyThrees(192333));
+        System.out.println(luckyThrees(182383));
+        System.out.println(luckyThrees(123323));
     }
 }

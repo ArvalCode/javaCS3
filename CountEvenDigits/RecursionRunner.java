@@ -8,5 +8,9 @@ public static void main(String args[])
 {
 System.out.println(RecursionFunOne.countEvenDigits(453222));
 //add more test cases
+System.out.println(RecursionFunOne.countEvenDigits(138482842));
+System.out.println(RecursionFunOne.countEvenDigits(333));
+System.out.println(RecursionFunOne.countEvenDigits(938372));
+
 }
 }
