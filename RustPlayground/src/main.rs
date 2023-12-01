@@ -1,4 +1,4 @@
-use std::{fs::{File, self}, io::{Read, Write}, string}; 
+use std::{fs::{File, self}, io::{Read, Write}, string, alloc::System}; 
 
 struct Rectangle {
     width: u32,
@@ -15,20 +15,28 @@ impl Rectangle {
     }
 }
 
-fn main() -> std::io::Result<()> {
-    let one = Rectangle {
-        width: 50,
-        height: 60,
-    };
+fn main() /*->std::io::Result<()>*/ {
+    // let one = Rectangle {
+    //     width: 50,
+    //     height: 60,
+    // };
     
-    let mut foo: File = File::create("foo.txt")?;
-    let mut foo2: File = File::create("foo2.txt")?;
-    foo.write_all(b"0110110")?;
-    foo.write(b"\nwhen the days");
-    fs::copy("foo.txt", "foo2.txt");
+    // let mut foo: File = File::create("foo.txt")?;
+    // let mut foo2: File = File::create("foo2.txt")?;
+    // foo.write_all(b"0110110")?;
+    // foo.write(b"\nwhen the days");
+    // fs::copy("foo.txt", "foo2.txt");
 
-    println!("File Contents:\n{}\nNumber of Bytes: {}", fs::read_to_string("foo2.txt").unwrap(), fs::read("foo2.txt").unwrap().len());
-    Ok(())
+    // println!("File Contents:\n{}\nNumber of Bytes: {}", fs::read_to_string("foo2.txt").unwrap(), fs::read("foo2.txt").unwrap().len());
+    // Ok(())
+
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("{}, world!", s2);
+
+
+    
 }
 
 
